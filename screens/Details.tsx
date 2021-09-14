@@ -19,7 +19,7 @@ export const Details = ({ route }: DetailsScreenProps) => {
                     <Text style={styles.name}>{name}</Text>
                     <Text style={styles.reused}>{fairings.reused ? 'REUSED' : 'NOT REUSED'}</Text>
                 </View>
-                <Text style={styles.details}>
+                <Text style={styles.date}>
                     Launch Date: {new Date(date_unix * 1000).toLocaleString()}
                 </Text>
                 <Text style={styles.details}>Details: {details ? details : 'Empty'}</Text>
@@ -58,6 +58,10 @@ const styles = StyleSheet.create({
     },
     details: {
         color: 'gray',
+        paddingVertical: 5,
+    },
+    date: {
+        color: '#252525',
         paddingVertical: 5,
     },
     reused: {
